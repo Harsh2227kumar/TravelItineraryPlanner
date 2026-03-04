@@ -2,3 +2,5 @@ streamlit
 nltk
 scikit-learn
 pandas
+spacy
+joblib

@@ -1,17 +1,17 @@
 [
   {
-    "question": "What are the college timings?",
-    "answer": "College timings are 8:00 AM to 5:00 PM, Monday to Saturday. Saturday classes end at 1:00 PM.",
-    "category": "timings"
-  },
-  {
-    "question": "What is the fee for B.Tech?",
-    "answer": "The B.Tech tuition fee is ₹80,000 per year. Hostel and mess charges are separate.",
+    "question": "What is the first-year fee for B.Tech?",
+    "answer": "The total first-year fee is ₹3,20,000, which includes ₹3,00,000 for tuition and a ₹20,000 refundable deposit. You pay this in two installments.",
     "category": "fees"
   },
   {
-    "question": "What is the last date to pay fees?",
-    "answer": "The last date to pay semester fees is within 30 days of the semester start date. Late fee of ₹500 applies after that.",
+    "question": "Is there a fee discount for Nagpur locals?",
+    "answer": "Yes, students with a Nagpur domicile certificate get a 15% discount on tuition fees. This makes their total first-year fee ₹2,75,000.",
+    "category": "fees"
+  },
+  {
+    "question": "Will I get a refund if I cancel my admission?",
+    "answer": "Yes, if you cancel 15 or more days before admission, you get a 100% refund minus a ₹5,000 processing fee. The refund drops to 90%, 50%, or 0% depending on how close to or after the start date you cancel.",
     "category": "fees"
   },
   {
@@ -20,14 +20,39 @@
     "category": "fees"
   },
   {
-    "question": "Who is the principal of the college?",
-    "answer": "The current principal is Dr. Rajesh Kumar. You can reach the principal's office at extension 101.",
-    "category": "contacts"
+    "question": "What is the last date to pay fees?",
+    "answer": "The last date to pay semester fees is within 30 days of the semester start date. Late fee of ₹500 applies after that.",
+    "category": "fees"
   },
   {
-    "question": "How do I contact the admission office?",
-    "answer": "The admission office can be reached at admissions@college.edu or by calling 011-2345-6789. Office hours are 9 AM to 4 PM.",
-    "category": "contacts"
+    "question": "What is the hostel curfew time?",
+    "answer": "Students must return to the hostel by 10:00 PM on regular weekdays. On Saturdays and Sundays, the curfew is slightly extended to 11:00 PM.",
+    "category": "timings"
+  },
+  {
+    "question": "When can my parents visit me on campus?",
+    "answer": "Visitors are allowed from 9:00 AM to 11:00 AM and 6:00 PM to 8:00 PM on regular working days. On Sundays and holidays, they can visit anytime between 11:00 AM and 5:00 PM.",
+    "category": "timings"
+  },
+  {
+    "question": "What are the college timings?",
+    "answer": "College timings are 8:00 AM to 5:00 PM, Monday to Saturday. Saturday classes end at 1:00 PM.",
+    "category": "timings"
+  },
+  {
+    "question": "What are the library timings?",
+    "answer": "The central library is open from 8 AM to 8 PM with over 50,000 books, e-journals, and a digital reading room.",
+    "category": "timings"
+  },
+  {
+    "question": "Which entrance exams are accepted for admission?",
+    "answer": "SIT Nagpur accepts scores from JEE Main, the institutional SITEEE, and state-level exams like the MHT CET.",
+    "category": "exams"
+  },
+  {
+    "question": "What are the rules for changing my branch?",
+    "answer": "To apply for a branch change after the first year, you need a minimum CGPA of 8.5. You must also have zero failed grades or academic backlogs on your record.",
+    "category": "exams"
   },
   {
     "question": "When are the semester exams?",
@@ -45,23 +70,63 @@
     "category": "exams"
   },
   {
+    "question": "What is the attendance requirement?",
+    "answer": "A minimum of 75% attendance is mandatory in each subject. Students below 75% may be detained from appearing in end-semester exams.",
+    "category": "exams"
+  },
+  {
+    "question": "Are there any specific academic penalties if I fail a subject?",
+    "answer": "Failing a subject results in an 'FF' grade on your transcript, which permanently disqualifies you from applying for any future branch changes.",
+    "category": "exams"
+  },
+  {
+    "question": "Who is the Training and Placement Officer?",
+    "answer": "Dr. Nitin Mandavgade leads the Training and Placement (T&P) Cell at SIT Nagpur.",
+    "category": "contact"
+  },
+  {
+    "question": "Who guides the robotics club?",
+    "answer": "The Rotonity Robotics and Automation Club is formally guided by Dr. Nitin Khedkar.",
+    "category": "contact"
+  },
+  {
+    "question": "How do I contact the admission office?",
+    "answer": "The admission office can be reached at admissions@college.edu or by calling 011-2345-6789. Office hours are 9 AM to 4 PM.",
+    "category": "contact"
+  },
+  {
+    "question": "How do I get a bonafide certificate?",
+    "answer": "Apply for a bonafide certificate at the administration office with your ID card. It is usually issued within 2-3 working days.",
+    "category": "contact"
+  },
+  {
+    "question": "Is it mandatory to stay in the hostel?",
+    "answer": "Yes, hostel accommodation is compulsory for all first-year students. Only students with a Nagpur domicile or permanent residency in Nagpur city limits are exempted.",
+    "category": "hostel"
+  },
+  {
+    "question": "What are the hostel and mess charges?",
+    "answer": "The mandatory annual mess fee for food is ₹1,53,000. For housing, a standard three-sharing room costs ₹2,13,600 annually, while a premium twin-sharing room costs ₹2,42,000.",
+    "category": "hostel"
+  },
+  {
     "question": "What are the hostel facilities?",
     "answer": "The college has separate boys' and girls' hostels with Wi-Fi, mess, laundry, and 24/7 security. Each room accommodates 2-3 students.",
     "category": "hostel"
   },
   {
-    "question": "What is the hostel fee?",
-    "answer": "Hostel fee is ₹45,000 per year which includes room rent and basic amenities. Mess charges of ₹3,000 per month are additional.",
-    "category": "hostel"
+    "question": "What is the eligibility for first-year B.Tech?",
+    "answer": "You need to pass your 12th-grade exams with Physics and Mathematics as compulsory subjects. You must score at least a 45% aggregate, or 40% if you belong to the SC/ST categories.",
+    "category": "admissions"
+  },
+  {
+    "question": "How do NRI students apply?",
+    "answer": "NRI and international admissions are managed centrally by the Symbiosis Centre for International Education (SCIE). These international candidates do not need to take Indian entrance exams like JEE or SITEEE.",
+    "category": "admissions"
   },
   {
     "question": "What documents are required for admission?",
     "answer": "You need: 10th & 12th marksheets, entrance exam scorecard, transfer certificate, migration certificate, 4 passport-size photos, Aadhaar card, and category certificate (if applicable).",
-    "category": "admissions"
-  },
-  {
-    "question": "What is the admission process?",
-    "answer": "Admission is based on entrance exam rank (JEE/State CET). After counseling, selected students must report with documents and pay the admission fee within the given deadline.",
     "category": "admissions"
   },
   {
@@ -70,23 +135,83 @@
     "category": "admissions"
   },
   {
-    "question": "Is there a library in the college?",
-    "answer": "Yes, the college has a central library open from 8 AM to 8 PM with over 50,000 books, e-journals, and a digital reading room.",
-    "category": "timings"
-  },
-  {
-    "question": "What are the placement statistics?",
-    "answer": "Last year, 85% of eligible students were placed. The highest package was 24 LPA and the average was 6.5 LPA. Top recruiters include TCS, Infosys, and Wipro.",
+    "question": "Can I get admission directly in the second year?",
+    "answer": "Yes, lateral entry is available for students with a relevant engineering diploma, B.Sc. degree, or vocational degree who secured a minimum aggregate of 45%.",
     "category": "admissions"
   },
   {
-    "question": "How do I get a bonafide certificate?",
-    "answer": "Apply for a bonafide certificate at the administration office with your ID card. It is usually issued within 2-3 working days.",
-    "category": "contacts"
+    "question": "Is there a management quota for direct admission?",
+    "answer": "Yes, the institute facilitates direct admissions through a management quota for candidates meeting the baseline 45% eligibility, though these seats typically entail higher financial fees.",
+    "category": "admissions"
   },
   {
-    "question": "What is the attendance requirement?",
-    "answer": "A minimum of 75% attendance is mandatory in each subject. Students below 75% may be detained from appearing in end-semester exams.",
-    "category": "exams"
+    "question": "What specializations are offered within the Computer Science branch?",
+    "answer": "Enrolled students can pursue specific academic tracks including Data Science, Cloud Computing, Cyber Security, Artificial Intelligence of Things (AIoT), and Machine Learning.",
+    "category": "admissions"
+  },
+  {
+    "question": "Can I study abroad while completing my degree?",
+    "answer": "Yes, the institute offers integrated dual degree pathways with Deakin University in Australia and Iowa State University in the United States, alongside shorter global immersion programs.",
+    "category": "admissions"
+  },
+  {
+    "question": "Are there any scholarships for female students?",
+    "answer": "Yes, the institute offers the Late Jayatee Deshmukh Scholarship specifically for high-performing female students. They also provide an Economical Backward Class (EBC) scholarship for female students from adopted rural villages.",
+    "category": "scholarships"
+  },
+  {
+    "question": "Do you offer merit scholarships?",
+    "answer": "Yes, SIT Nagpur awards general Merit Scholarships to students who become semester toppers within their respective engineering branches.",
+    "category": "scholarships"
+  },
+  {
+    "question": "What is the highest salary package offered during placements?",
+    "answer": "The highest recorded salary package achieved by a recent graduating cohort was ₹44.00 Lakhs Per Annum (LPA).",
+    "category": "placements"
+  },
+  {
+    "question": "What is the average package for campus placements?",
+    "answer": "The median salary for successful candidates is ₹8.9 LPA, while the overall average or mean salary stands at ₹6.56 LPA.",
+    "category": "placements"
+  },
+  {
+    "question": "Which top companies visit the campus for recruitment?",
+    "answer": "The campus actively hosts major recruitment drives from tier-one technology firms and consultancies, including Microsoft, Amazon, Oracle, Accenture, and Deloitte.",
+    "category": "placements"
+  },
+  {
+    "question": "Do students receive specialized placement training?",
+    "answer": "Yes, the institution implements an intensive Industry Readiness Program featuring 45 hours of dedicated training in quantitative aptitude and logical reasoning.",
+    "category": "placements"
+  },
+  {
+    "question": "Is there a dress code on campus?",
+    "answer": "Yes, items like torn jeans and collarless t-shirts are strictly banned on normal days. Additionally, every Wednesday is a mandatory formal dress day where you must wear an institute-provided uniform.",
+    "category": "campus"
+  },
+  {
+    "question": "Do I need to purchase a laptop for the first year?",
+    "answer": "While not immediately mandated due to extensive on-campus computer labs, senior students highly recommend procuring a personal machine for advanced project development.",
+    "category": "campus"
+  },
+  {
+    "question": "What sports facilities are available on campus?",
+    "answer": "The sports complex features a fully equipped gymnasium, cricket and football grounds, multiple professional-grade courts for basketball and tennis, and indoor recreational areas.",
+    "category": "campus"
+  },
+  {
+    "question": "What clubs or extracurriculars can I join?",
+    "answer": "The student ecosystem includes the Arts and Cultural Club, Literary Club, Entrepreneurship Club, and prominent technical societies like the Rotonity Robotics Club.",
+    "category": "campus"
+  },
+  {
+    "question": "How are the engineering classes taught?",
+    "answer": "The core curriculum entirely utilizes a Problem-Based Learning (PBL) framework, requiring students to actively apply theoretical knowledge to solve real-world engineering challenges.",
+    "category": "academics"
+  },
+  {
+    "question": "Can I earn an honors degree?",
+    "answer": "Yes, students have the option to pursue a B.Tech Degree with Honors, which mandates the completion of additional, advanced technical coursework.",
+    "category": "academics"
   }
 ]
