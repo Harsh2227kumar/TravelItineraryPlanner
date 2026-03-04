@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What are the college timings?",
+    "answer": "College timings are 8:00 AM to 5:00 PM, Monday to Saturday. Saturday classes end at 1:00 PM.",
+    "category": "timings"
+  },
+  {
+    "question": "What is the fee for B.Tech?",
+    "answer": "The B.Tech tuition fee is ₹80,000 per year. Hostel and mess charges are separate.",
+    "category": "fees"
+  },
+  {
+    "question": "What is the last date to pay fees?",
+    "answer": "The last date to pay semester fees is within 30 days of the semester start date. Late fee of ₹500 applies after that.",
+    "category": "fees"
+  },
+  {
+    "question": "How can I pay the fees?",
+    "answer": "Fees can be paid online via the college portal, through NEFT/RTGS, or by demand draft at the accounts office.",
+    "category": "fees"
+  },
+  {
+    "question": "Who is the principal of the college?",
+    "answer": "The current principal is Dr. Rajesh Kumar. You can reach the principal's office at extension 101.",
+    "category": "contacts"
+  },
+  {
+    "question": "How do I contact the admission office?",
+    "answer": "The admission office can be reached at admissions@college.edu or by calling 011-2345-6789. Office hours are 9 AM to 4 PM.",
+    "category": "contacts"
+  },
+  {
+    "question": "When are the semester exams?",
+    "answer": "End-semester exams are usually held in May (even semester) and December (odd semester). The exact schedule is published 3 weeks before exams.",
+    "category": "exams"
+  },
+  {
+    "question": "What is the passing criteria for exams?",
+    "answer": "You need a minimum of 40% in internal assessment and 40% in the end-semester exam, with an overall aggregate of 40% to pass a subject.",
+    "category": "exams"
+  },
+  {
+    "question": "How do I apply for a revaluation?",
+    "answer": "Revaluation applications can be submitted within 10 days of result declaration through the exam portal. The revaluation fee is ₹500 per subject.",
+    "category": "exams"
+  },
+  {
+    "question": "What are the hostel facilities?",
+    "answer": "The college has separate boys' and girls' hostels with Wi-Fi, mess, laundry, and 24/7 security. Each room accommodates 2-3 students.",
+    "category": "hostel"
+  },
+  {
+    "question": "What is the hostel fee?",
+    "answer": "Hostel fee is ₹45,000 per year which includes room rent and basic amenities. Mess charges of ₹3,000 per month are additional.",
+    "category": "hostel"
+  },
+  {
+    "question": "What documents are required for admission?",
+    "answer": "You need: 10th & 12th marksheets, entrance exam scorecard, transfer certificate, migration certificate, 4 passport-size photos, Aadhaar card, and category certificate (if applicable).",
+    "category": "admissions"
+  },
+  {
+    "question": "What is the admission process?",
+    "answer": "Admission is based on entrance exam rank (JEE/State CET). After counseling, selected students must report with documents and pay the admission fee within the given deadline.",
+    "category": "admissions"
+  },
+  {
+    "question": "What courses are offered?",
+    "answer": "The college offers B.Tech in Computer Science, Electronics, Mechanical, Civil, and Electrical Engineering. M.Tech and PhD programs are also available.",
+    "category": "admissions"
+  },
+  {
+    "question": "Is there a library in the college?",
+    "answer": "Yes, the college has a central library open from 8 AM to 8 PM with over 50,000 books, e-journals, and a digital reading room.",
+    "category": "timings"
+  },
+  {
+    "question": "What are the placement statistics?",
+    "answer": "Last year, 85% of eligible students were placed. The highest package was 24 LPA and the average was 6.5 LPA. Top recruiters include TCS, Infosys, and Wipro.",
+    "category": "admissions"
+  },
+  {
+    "question": "How do I get a bonafide certificate?",
+    "answer": "Apply for a bonafide certificate at the administration office with your ID card. It is usually issued within 2-3 working days.",
+    "category": "contacts"
+  },
+  {
+    "question": "What is the attendance requirement?",
+    "answer": "A minimum of 75% attendance is mandatory in each subject. Students below 75% may be detained from appearing in end-semester exams.",
+    "category": "exams"
+  }
+]
