@@ -8,7 +8,13 @@ so that app.py stays clean and focused on layout only.
 from typing import Dict, List, Optional
 import streamlit as st
 
-from src.config import CONFIDENCE_HIGH, CONFIDENCE_MED
+from src.config import (
+    CONFIDENCE_HIGH, 
+    CONFIDENCE_MED,
+    HANDOVER_EMAIL,
+    HANDOVER_PHONE,
+    HANDOVER_HOURS
+)
 
 
 def confidence_color(score: float) -> str:
@@ -93,3 +99,28 @@ def render_chat_history(history: List[Dict[str, str]]):
         st.markdown(f"**You:** {turn['user']}")
         st.markdown(f"**🤖 Bot:** {turn['bot']}")
         st.markdown("---")
+
+def render_fallback_ui(message: str, suggestions: List[Dict[str, str]] = None, show_advisor: bool = False):
+    """
+    Display a fallback UI with optional suggestions and advisor contact info.
+    """
+    st.markdown("---")
+    st.warning(message)
+    
+    if suggestions:
+        st.markdown("**Did you mean one of these?**")
+        for i, s in enumerate(suggestions, 1):
+            score = s.get('score', 0)
+            with st.expander(f"{i}. {s['question']} (confidence: {score:.2f})"):
+                st.write(s['answer'])
+                
+    if show_advisor:
+        st.markdown("---")
+        st.markdown("### 📞 Talk to a Human Advisor")
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown(f"**Email:** [{HANDOVER_EMAIL}](mailto:{HANDOVER_EMAIL})")
+            st.markdown(f"**Phone:** {HANDOVER_PHONE}")
+        with col2:
+            st.markdown(f"**Office Hours:** {HANDOVER_HOURS}")
+

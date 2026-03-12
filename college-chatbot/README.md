@@ -1,47 +1,85 @@
-# 🎓 College FAQ Chatbot
+# 🎓 College FAQ Chatbot (Production-Ready)
 
-An intelligent FAQ chatbot for college students — answers questions about fees, timings, exams, admissions, hostel, and more.
+An intelligent, scalable FAQ chatbot for college students. This repository has been upgraded from a prototype to a full production microservices architecture featuring a **FastAPI** backend and a **Streamlit** frontend, orchestrated via **Docker**.
 
-## Architecture
+---
+
+## 🏗️ Architecture
 
 ```
-app.py                     ← Streamlit entry point (thin)
+college-chatbot/
 │
-├── src/core/              ← Business logic engines
-│   ├── __init__.py        ← Public API: get_answer()
-│   └── matcher.py         ← Keyword-matching engine
+├── docker-compose.yml          ← Production orchestration
+├── backend.Dockerfile          ← FastAPI Server container
+├── frontend.Dockerfile         ← Streamlit UI container
 │
-├── src/data/              ← Data access layer
-│   └── loader.py          ← Load & validate faqs.json
+├── src/
+│   ├── api/                    ← ✨ NEW: FastAPI Backend
+│   │   ├── main.py             ← API routes (/chat, /analytics)
+│   │   └── schemas.py          ← Pydantic validation models
+│   │
+│   ├── core/                   ← Core ML Intelligence
+│   │   ├── intent.py           ← Intent Classification (LinearSVC)
+│   │   ├── retrieval.py        ← Semantic Search (TF-IDF)
+│   │   ├── entities.py         ← NER (spaCy)
+│   │   ├── fallback.py         ← Soft & Hard Confidence Fallbacks
+│   │   └── analytics.py        ← Interaction logger
+│   │
+│   └── ui/                     ← Frontend components
 │
-├── src/ui/                ← UI components
-│   ├── components.py      ← Answer card, confidence badge
-│   └── sidebar.py         ← Sidebar layout
+├── app.py                      ← ✨ UPDATED: Streamlit Client UI 
+├── analytics/dashboard.py      ← ✨ UPDATED: Streamlit Analytics UI
 │
-├── src/config.py          ← Centralized settings
-│
-├── data/faqs.json         ← FAQ database
-└── tests/                 ← Unit tests
+└── data/                       
+    ├── faqs.json               ← Knowledge base
+    ├── intents.json            ← ML Training definitions
+    └── logs/interactions.db    ← SQLite usage logs
 ```
 
-## Quick Start
+---
+
+## 🚀 Quick Start (Production via Docker)
+
+The easiest and most scalable way to run the application is via Docker Compose.
 
 ```bash
-# Clone the repo
+# 1. Clone the repository
 git clone <repo-url>
 cd college-chatbot
 
-# Create virtual environment
+# 2. Start the microservices
+docker-compose up --build
+```
+*   **Frontend UI:** `http://localhost:8501`
+*   **Backend API Docs (Swagger):** `http://localhost:8000/docs`
+
+---
+
+## 💻 Local Development Setup (Without Docker)
+
+If you wish to run the backend and frontend separately on your host machine for debugging:
+
+### 1. Backend Server (FastAPI)
+```bash
+# Create venv & install
 python -m venv venv
-venv\Scripts\activate           # Windows
-source venv/bin/activate        # Mac/Linux
-
-# Install dependencies
+venv\Scripts\activate            # Windows
+source venv/bin/activate         # Mac/Linux
 pip install -r requirements.txt
+python -m spacy download en_core_web_sm
 
-# Run the web UI
+# Start API
+uvicorn src.api.main:app --reload --port 8000
+```
+
+### 2. Frontend Server (Streamlit)
+*In a new terminal window:*
+```bash
+venv\Scripts\activate
 streamlit run app.py
 ```
+
+---
 
 ## Running Tests
 
@@ -50,24 +88,60 @@ pip install pytest
 python -m pytest tests/ -v
 ```
 
+All 42 tests should pass.
+
+---
+
+## Run Weekly Standalone Scripts
+
+You can run each assignment week independently:
+
+```bash
+python weeks/week1_basic_bot.py
+python weeks/week2_preprocessing.py
+python weeks/week3_synonym_bot.py
+python weeks/week4_tfidf_bot.py
+python weeks/week5_intent_classifier.py
+python weeks/week6_entity_extractor.py
+python weeks/week7_context_handler.py
+python weeks/week8_fallback_handler.py
+python weeks/week9_multichannel_bot.py
+python weeks/week10_analytics_reporter.py
+```
+
+---
+
+## Features by Week
+
+| Week | Feature | Key File |
+|------|---------|----------|
+| 1 | Basic FAQ Responder | `matcher.py` |
+| 2 | Text Preprocessing | `preprocessor.py` |
+| 3 | Synonym Expansion | `synonyms.py` |
+| 4 | TF-IDF Retrieval | `retrieval.py` |
+| 5 | Intent Classification (LinearSVC) | `intent.py` |
+| 6 | Entity Extraction (spaCy) | `entities.py` |
+| 7 | Multi-turn Context | `context.py` |
+| 8 | Fallback & Advisor Handover | `fallback.py` |
+| 9 | Multichannel Deployment | `core_bot.py` + `channels/` |
+| 10 | Analytics Dashboard | `analytics.py` + `dashboard.py` |
+
+---
+
 ## Tech Stack
 
 | Tool | Purpose |
 |------|---------|
-| Python 3.10+ | Core language |
-| Streamlit | Web UI |
-| NLTK | Text preprocessing (upcoming) |
-| scikit-learn | TF-IDF vectorizer (upcoming) |
-| pandas | Data management |
+| Python 3.9+ | Core language |
+| Streamlit | Web UI & analytics dashboard |
+| NLTK | Text preprocessing & stopwords |
+| scikit-learn | TF-IDF vectorizer, LinearSVC classifier |
+| spaCy | Named entity recognition |
+| pandas | Data analysis & analytics |
+| SQLite | Interaction logging |
+| joblib | Model serialization |
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Add your code in the appropriate `src/` sub-package
-4. Write tests in `tests/`
-5. Update `CHANGELOG.md`
-6. Open a pull request
+---
 
 ## License
 

@@ -34,3 +34,14 @@ FALLBACK_ANSWER = (
     "Please contact the college office for assistance."
 )
 EMPTY_QUERY_MSG = "Please ask a question about the college."
+
+# ── Fallback thresholds (Week 8) ─────────────────────────────────────────────
+FALLBACK_SOFT_THRESHOLD = 0.3   # Score 0.2–0.3 → soft fallback (suggestions)
+FALLBACK_HARD_THRESHOLD = 0.2   # Score < 0.2 → hard fallback (handover)
+TOP_N_SUGGESTIONS = 3           # Number of FAQ suggestions in soft fallback
+
+# ── Handover contacts (Week 8) ───────────────────────────────────────────────
+HANDOVER_EMAIL = "admissions@college.edu"
+HANDOVER_PHONE = "011-2345-6789"
+HANDOVER_HOURS = "9:00 AM – 4:00 PM (Mon–Sat)"
+

@@ -9,7 +9,7 @@ import json
 
 import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import LinearSVC
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import classification_report
@@ -45,13 +45,18 @@ def train_classifier(test_size: float = 0.2) -> dict:
     """
     X, y = _load_training_data()
 
+    from sklearn.pipeline import FeatureUnion
+
     model = Pipeline([
-        ("tfidf", TfidfVectorizer(sublinear_tf=True)),
-        ("clf", MultinomialNB(alpha=0.1)),
+        ("features", FeatureUnion([
+            ("word", TfidfVectorizer(sublinear_tf=True, ngram_range=(1, 2), analyzer="word")),
+            ("char", TfidfVectorizer(sublinear_tf=True, ngram_range=(3, 5), analyzer="char_wb")),
+        ])),
+        ("clf", LinearSVC(dual=False, C=0.5, max_iter=10000)),
     ])
 
     # Cross-validation for robust accuracy estimate
-    cv_scores = cross_val_score(model, X, y, cv=5, scoring="accuracy")
+    cv_scores = cross_val_score(model, X, y, cv=3, scoring="accuracy")
     accuracy = cv_scores.mean()
 
     # Train on FULL dataset for the saved model

@@ -1,64 +1,87 @@
-"""
-🎓 College FAQ Chatbot — Streamlit Entry Point.
-
-This file is intentionally thin. All logic lives in src/.
-Run with: streamlit run app.py
-"""
-
 import streamlit as st
+import requests
 
 from src.config import APP_TITLE, APP_DESCRIPTION
-from src.core import get_answer
-from src.core.context import (
-    resolve_context,
-    update_context,
-    add_to_history,
-    get_history,
-)
 from src.ui.sidebar import render_sidebar
-from src.ui.components import (
-    render_answer,
-    render_intent_badge,
-    render_entities,
-    render_chat_history,
+from src.ui.components import render_answer, render_fallback_ui
+
+import os
+
+# FastAPI Backend Configuration
+API_URL = os.getenv("API_URL", "http://localhost:8000")
+
+# Configure page
+st.set_page_config(
+    page_title=APP_TITLE,
+    page_icon="🎓",
+    layout="wide"
 )
 
-
-# ── Page Configuration ────────────────────────────────────────────────────────
-st.set_page_config(page_title="College FAQ Chatbot", page_icon="🎓", layout="centered")
-
-# ── Sidebar ───────────────────────────────────────────────────────────────────
+# Render standard sidebar
 render_sidebar()
 
-# ── Main Area ─────────────────────────────────────────────────────────────────
-st.title(APP_TITLE)
-st.caption(APP_DESCRIPTION)
+# Main UI Header
+st.title("🎓 College FAQ Chatbot")
+st.markdown(APP_DESCRIPTION)
 
-# Show chat history above the input
-history = get_history()
-render_chat_history(history)
+# Initialize chat history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
-# User input
-user_input = st.text_input(
-    "💬 Ask your question here...",
-    placeholder="e.g. What are the college timings?",
-    key="user_query",
-)
+# Display standard chat history
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
-if user_input:
-    # Run the full pipeline
-    answer, score, intent, entities = get_answer(user_input)
+# Accept user input
+if prompt := st.chat_input("Ask a question (e.g., 'What is the hostel fee?'):"):
+    
+    # 1. Add user message to UI state
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.markdown(prompt)
 
-    # Resolve context for follow-up queries
-    intent, entities = resolve_context(user_input, intent, entities)
-
-    # Update context with current turn
-    update_context(intent, entities)
-
-    # Add to history
-    add_to_history(user_input, answer)
-
-    # Render results
-    render_answer(answer, score)
-    render_intent_badge(intent)
-    render_entities(entities)
+    # 2. Add empty assistant message container
+    with st.chat_message("assistant"):
+        with st.spinner("Thinking..."):
+            try:
+                # Call the FastAPI backend
+                response = requests.post(
+                    f"{API_URL}/chat", 
+                    json={"query": prompt, "channel": "web"},
+                    timeout=5
+                )
+                response.raise_for_status()
+                data = response.json()
+                
+                # Format based on response type (Answer vs Fallback)
+                if data["type"] == "answer":
+                    render_answer(data["answer"], data.get("score", 0))
+                    # Add to text history
+                    st.session_state.messages.append({"role": "assistant", "content": data["answer"]})
+                    
+                elif data["type"] == "fallback_soft":
+                    render_fallback_ui(
+                        data.get("clarification", "I'm not exactly sure. Did you mean:"),
+                        data.get("suggestions", []),
+                        show_advisor=True
+                    )
+                    hist_text = "I wasn't sure. Suggested related FAQs instead."
+                    st.session_state.messages.append({"role": "assistant", "content": hist_text})
+                    
+                elif data["type"] == "fallback_hard":
+                    render_fallback_ui(
+                        data.get("message", "I don't have information on that."),
+                        [],
+                        show_advisor=True
+                    )
+                    st.session_state.messages.append({"role": "assistant", "content": "I couldn't answer that. Advisor contact provided."})
+                    
+            except requests.exceptions.ConnectionError:
+                err = "⚠️ Cannot connect to the backend server. Is FastAPI running on port 8000?"
+                st.error(err)
+                st.session_state.messages.append({"role": "assistant", "content": err})
+            except Exception as e:
+                err = f"An error occurred: {e}"
+                st.error(err)
+                st.session_state.messages.append({"role": "assistant", "content": err})

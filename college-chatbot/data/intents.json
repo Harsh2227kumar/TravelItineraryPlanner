@@ -28,7 +28,17 @@
                 "Are hostel fees included in tuition?",
                 "What is the fee for lateral entry students?",
                 "Do fees increase every year?",
-                "What is the cost of education here?"
+                "What is the cost of education here?",
+                "Give me the fee breakup",
+                "What is the exam fee amount?",
+                "How much money do I need for B.Tech fees?",
+                "Tuition charges for engineering",
+                "Fee concession for economically backward students",
+                "Is there an EMI option for fee payment?",
+                "What is the fee for M.Tech course?",
+                "How much should I deposit at admission time?",
+                "Is the fee same for all branches?",
+                "What is the development fee charged?"
             ]
         },
         {
@@ -59,7 +69,17 @@
                 "Is there negative marking in exams?",
                 "What is the CGPA calculation method?",
                 "When are the practical exams conducted?",
-                "How do I get my exam admit card?"
+                "How do I get my exam admit card?",
+                "What is the university exam date?",
+                "How many attempts allowed for backlog exams?",
+                "What is the re-examination fee?",
+                "Exam timetable for SEM 5",
+                "Are calculators allowed in exams?",
+                "What is the duration of each exam paper?",
+                "How much marks for distinction grade?",
+                "When will supplementary results come?",
+                "Is there viva for lab exams?",
+                "What is the exam registration process?"
             ]
         },
         {
@@ -90,7 +110,17 @@
                 "When are the tutorial classes held?",
                 "Does the college have a winter break?",
                 "What are the office working hours?",
-                "How long is each class period?"
+                "How long is each class period?",
+                "What is the daily class routine?",
+                "When does the morning assembly start?",
+                "Is there an evening shift available?",
+                "College gate closing time",
+                "Opening hours of the computer lab",
+                "When does the canteen open and close?",
+                "What is the duration of lunch break?",
+                "Are there Sunday classes ever?",
+                "What time does the bus leave campus?",
+                "At what hour are evening lectures?"
             ]
         },
         {
@@ -121,7 +151,17 @@
                 "Are there separate hostels for boys and girls?",
                 "What is the mess menu like?",
                 "Is medical help available near the hostel?",
-                "Can day scholars visit the hostel?"
+                "Can day scholars visit the hostel?",
+                "Hostel room size and dimensions",
+                "Is there a recreation room in hostel?",
+                "What is the hostel deposit amount?",
+                "Hostel mess timing for dinner",
+                "How to change hostel mess preference?",
+                "Is ragging present in the hostel?",
+                "What is the hostel allocation process?",
+                "Are coolers allowed in hostel rooms?",
+                "How to complain about hostel maintenance?",
+                "Is there an in-house cafe in the hostel?"
             ]
         },
         {
@@ -152,7 +192,17 @@
                 "Is there any minority scholarship available?",
                 "Can I get scholarship if I have a backlog?",
                 "What percentage is needed for merit scholarship?",
-                "Does the college help with scholarship applications?"
+                "Does the college help with scholarship applications?",
+                "Scholarship amount for topper students",
+                "Is there a scholarship for single parent families?",
+                "How to apply for state government scholarship?",
+                "Scholarship criteria for OBC category",
+                "Financial assistance for backward class students",
+                "Is tuition waiver available for merit?",
+                "Which foundation scholarships are accepted?",
+                "How much financial support for EWS students?",
+                "When is the merit scholarship list published?",
+                "Scholarship renewal requirements after first year"
             ]
         },
         {
@@ -161,12 +211,12 @@
             "examples": [
                 "What is the admission process?",
                 "What documents are required for admission?",
-                "What courses are offered?",
+                "What programs does the college offer?",
                 "What is the eligibility for B.Tech?",
                 "When does admission start?",
                 "Is there a management quota?",
                 "What is the minimum age for admission?",
-                "Which companies come for placement?",
+                "What courses are offered?",
                 "What is the cutoff for admission?",
                 "Can I take lateral entry?",
                 "Is there an entrance exam?",
@@ -177,13 +227,23 @@
                 "Is there a spot round for vacant seats?",
                 "How do I register for counseling?",
                 "Is direct admission possible?",
-                "What is the average placement salary?",
+                "What is the refund policy after admission?",
                 "Do you accept JEE scores?",
-                "What was last year's cutoff rank?",
+                "What is the last date for admission?",
                 "How many seats are available in CSE?",
                 "Is there a quota for NRI students?",
                 "What documents should I bring on reporting day?",
-                "Can I change my branch after admission?"
+                "Can I change my branch after admission?",
+                "Registration process for new students",
+                "How to fill the admission form online?",
+                "Eligibility criteria for diploma holders",
+                "What entrance test is required for admission?",
+                "How to apply for B.Tech admission?",
+                "Admission open for which academic year?",
+                "Steps to enroll after getting the admit letter",
+                "What is the reservation policy in admission?",
+                "How to book my seat after counseling?",
+                "Is walk-in admission accepted?"
             ]
         },
         {
@@ -214,7 +274,17 @@
                 "How do I book a meeting with the HOD?",
                 "Where is the student helpdesk?",
                 "How do I contact the anti-ragging committee?",
-                "What is the address of the college?"
+                "What is the address of the college?",
+                "Faculty directory with phone numbers",
+                "Who is the chairman of the college?",
+                "Contact number for library staff",
+                "Email address for sports department",
+                "Who handles scholarship queries?",
+                "Reception desk phone number",
+                "Administrative staff contact list",
+                "How to get migration certificate issued?",
+                "Office timings for document verification",
+                "Which office handles fee related issues?"
             ]
         },
         {
@@ -245,7 +315,17 @@
                 "Is there placement support for lateral entry students?",
                 "How many companies visited last year?",
                 "What is the lowest package offered?",
-                "Are remote job offers also available?"
+                "Are remote job offers also available?",
+                "Campus recruitment drive schedule",
+                "Which MNCs hire from this college?",
+                "How to prepare for campus interviews?",
+                "Is aptitude test part of placement process?",
+                "Salary offered by top recruiters",
+                "Number of offers in last placement season",
+                "Are startup companies also invited?",
+                "Placement coordinator contact details",
+                "Mock interview sessions for final year?",
+                "What is the dream company category cutoff?"
             ]
         },
         {
@@ -276,7 +356,17 @@
                 "Is there a cafeteria on campus?",
                 "Are there any annual events?",
                 "Is photography club available?",
-                "What is campus life like?"
+                "What is campus life like?",
+                "Is there a cricket ground on campus?",
+                "What indoor games are available?",
+                "Robotics club activities and events",
+                "Does the college have a debate society?",
+                "Is there a campus auditorium?",
+                "Where can students hang out on campus?",
+                "Is there a stationery shop on campus?",
+                "Does the campus have CCTV surveillance?",
+                "What buses connect to the campus?",
+                "Is there an ATM inside campus?"
             ]
         },
         {
@@ -307,7 +397,17 @@
                 "How is plagiarism handled?",
                 "Is attendance mandatory for all classes?",
                 "What is the grading scale used?",
-                "Are there bridge courses for weak students?"
+                "Are there bridge courses for weak students?",
+                "What is the pedagogy followed here?",
+                "How is coursework structured each semester?",
+                "Are there industry guest lectures?",
+                "What is the capstone project requirement?",
+                "How are lab practicals graded?",
+                "Is continuous assessment part of academics?",
+                "What is the dissertation requirement for MTech?",
+                "How many total credits needed for graduation?",
+                "Are audit courses available?",
+                "What is the academic probation policy?"
             ]
         }
     ]
