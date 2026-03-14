@@ -5,14 +5,14 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.data.loader import load_faqs
-from src.core.retrieval import TFIDFRetriever
+from utils.data import load_faqs
+from utils.retrieval import TfidfFaqBot
 
 
 def run_demo():
     """Run a simple CLI demo for week 4 TF-IDF retrieval."""
     faqs = load_faqs()
-    bot = TFIDFRetriever(faqs)
+    bot = TfidfFaqBot(faqs)
 
     print("Week 4 - FAQ Retrieval with TF-IDF")
     print("Type a question, or 'exit' to quit.\n")

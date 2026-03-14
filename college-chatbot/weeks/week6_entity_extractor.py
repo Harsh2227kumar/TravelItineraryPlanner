@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.core.entities import extract_entities
+from utils.entities import extract_entities
 
 
 def run_demo():

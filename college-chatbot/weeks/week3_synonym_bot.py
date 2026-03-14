@@ -5,8 +5,8 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.core.preprocessor import preprocess
-from src.core.synonyms import apply_synonyms
+from utils.preprocess import preprocess
+from utils.synonyms import apply_synonyms
 
 
 def run_demo():

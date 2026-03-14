@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.core.fallback import handle_response
+from utils.fallback import handle_response
 
 
 def run_demo():

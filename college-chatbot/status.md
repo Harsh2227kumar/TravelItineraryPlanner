@@ -32,7 +32,7 @@ This status reflects code + test verification against:
 | 9 | Multichannel deployment mockup | ⚠️ Partial | Channel-agnostic core exists and week demo works, but dedicated `channels/cli_app.py` and `channels/whatsapp_mock.py` are still missing |
 | 10 | Analytics and improvement | ⚠️ Partial | Logging/dashboard exist; improvement workflow needs stronger formalization |
 
-Estimated overall completion: **~84% fully compliant** with month-wise instruction rules.
+Estimated overall completion: **~88% fully compliant** with month-wise instruction rules.
 
 ---
 
@@ -44,9 +44,10 @@ Estimated overall completion: **~84% fully compliant** with month-wise instructi
 - TF-IDF + confidence available
 - Required modules are present and tested
 - `weeks/` standalone scripts are now present and runnable (`weeks/week1_basic_bot.py` ... `weeks/week10_analytics_reporter.py`)
+- Week scripts now run on an independent week-track utility layer (`utils/`) rather than production `src/core` modules
 
 ### Gaps
-- ⚠️ Standalone scripts are available, but these are currently lightweight demos built on production modules (not separate week-only logic branches)
+- ✅ No major structural gaps for month-1 standalone execution requirements
 
 ---
 

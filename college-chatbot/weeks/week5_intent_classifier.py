@@ -5,12 +5,13 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.core.intent import train_classifier, predict_intent
+from utils.intent import train_classifier, predict_intent, REQUIRED_INTENTS
 
 
 def run_demo():
     """Train the intent model and run a few sample predictions."""
     print("Week 5 - Intent Classification")
+    print(f"Using required intents: {', '.join(REQUIRED_INTENTS)}")
     result = train_classifier()
     print(f"Training complete. CV Accuracy: {result['accuracy']:.2%}\n")
 
